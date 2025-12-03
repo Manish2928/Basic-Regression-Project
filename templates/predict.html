@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict</title>
+</head>
+<body>
+    <div class="login">
+        <h1>FWI Prediction</h1>
+
+        <!-- Main input resive query to our ML -->
+         <form action="{{url_for('predict')}}" method="POST">
+            Temprature : <input type="text" name="Temprature" placeholder="Temprature" required="required"><br>
+            RH         : <input type="text" name="RH" placeholder="RH" required="required"><br>
+            Ws         : <input type="text" name="Ws" placeholder="Ws" required="required"><br>
+            Rain       : <input type="text" name="Rain" placeholder="Rain" required="required"><br>
+            FFMC       : <input type="text" name="FFMC" placeholder="FFMC" required="required"><br>
+            DMC        : <input type="text" name="DMC" placeholder="DMC" required="required"><br>
+            ISI        : <input type="text" name="ISI" placeholder="ISI" required="required"><br>
+            Classes    : <input type="text" name="Classes" placeholder="Classes" required="required"><br>
+            Region     : <input type="text" name="Region" placeholder="Region" required="required"><br>
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button><br>
+         </form>
+
+         <h2>
+            The FWI Prediction is : {{results}}
+         </h2>
+    </div>
+</body>
+</html>

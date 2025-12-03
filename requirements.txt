@@ -3,3 +3,7 @@ numpy
 matplotlib
 seaborn
 scikit-learn
+flask
+numpy
+pandas
+scikit-learn
